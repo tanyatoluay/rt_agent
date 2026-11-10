@@ -1,0 +1,15 @@
+# core (toy backend, baselines, analysis, MCP server)
+numpy>=1.26
+scipy>=1.11
+matplotlib>=3.8
+mcp>=1.2            # works with both the 1.x (FastMCP) and 2.x (MCPServer) Python SDK
+
+# LLM agent experiments
+anthropic>=0.40
+
+# real planning backend
+portpy              # pulls in cvxpy; see https://github.com/PortPy-Project/PortPy
+huggingface_hub     # PortPy needs it to download the dataset, but does not install it itself
+# Mosek is fastest for PortPy problems and free for academic use (needs a license file).
+# Without it, set "solver": "CLARABEL" or "SCS" in the config.
+mosek

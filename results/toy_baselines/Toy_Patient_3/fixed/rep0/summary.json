@@ -1,0 +1,50 @@
+{
+  "patient": "Toy_Patient_3",
+  "method": "fixed",
+  "repeat": 0,
+  "initial_score": 79.448,
+  "initial_n_passed": 5,
+  "best_score": 79.448,
+  "best_n_passed": 5,
+  "best_iteration": 0,
+  "final_score": 79.448,
+  "optimizer_calls_used": 0,
+  "invalid_tool_calls": 0,
+  "n_failed_solves": 0,
+  "total_solver_time_s": 0,
+  "best_metrics": {
+    "PTV_D95": 59.924,
+    "PTV_Dmax": 60.611,
+    "CORD_Dmax": 6.796,
+    "ESOPHAGUS_Dmean": 4.59,
+    "HEART_Dmean": 12.523,
+    "LUNGS_V20": 43.75,
+    "LUNGS_Dmean": 21.938,
+    "PTV_mean": 60.122,
+    "PTV_max": 60.611,
+    "CORD_mean": 3.758,
+    "CORD_max": 6.796,
+    "ESOPHAGUS_mean": 4.59,
+    "ESOPHAGUS_max": 10.422,
+    "HEART_mean": 12.523,
+    "HEART_max": 43.175,
+    "LUNGS_NOT_GTV_mean": 21.938,
+    "LUNGS_NOT_GTV_max": 60.764,
+    "PTV_D98": 59.901,
+    "PTV_D2": 60.611
+  },
+  "best_weights": {
+    "obj0_quadratic-overdose_PTV": 10000,
+    "obj1_quadratic-underdose_PTV": 100000,
+    "obj2_quadratic_CORD": 10,
+    "obj3_quadratic_ESOPHAGUS": 20,
+    "obj4_quadratic_HEART": 20,
+    "obj5_quadratic_LUNGS_NOT_GTV": 10,
+    "obj6_smoothness-quadratic": 1000
+  },
+  "trajectory": [
+    79.448
+  ],
+  "stop_reason": "no tuning",
+  "wall_time_s": 0.0
+}

@@ -1,0 +1,13 @@
+{
+  "name": "lung_2Gy_30Fx_scorecard_v1",
+  "_comment": "Fixed evaluation criteria for 60 Gy / 30 fx lung IMRT. Limits are typical conventional-fractionation lung constraints (RTOG 0617 / QUANTEC style). BEFORE RUNNING EXPERIMENTS: align these with the clinical criteria file PortPy ships for Lung_2Gy_30Fx (validate_environment.py prints it), freeze the file, and report it in the paper. Never change it between methods.",
+  "criteria": [
+    {"name": "PTV_D95",        "structure": "PTV",           "kind": "D",    "param": 95,   "direction": "lower", "goal": 60.0, "limit": 57.0, "priority": 3, "unit": "Gy"},
+    {"name": "PTV_Dmax",       "structure": "PTV",           "kind": "max",  "param": null, "direction": "upper", "goal": 66.0, "limit": 69.0, "priority": 2, "unit": "Gy"},
+    {"name": "CORD_Dmax",      "structure": "CORD",          "kind": "max",  "param": null, "direction": "upper", "goal": 45.0, "limit": 50.0, "priority": 3, "unit": "Gy"},
+    {"name": "ESOPHAGUS_Dmean","structure": "ESOPHAGUS",     "kind": "mean", "param": null, "direction": "upper", "goal": 25.0, "limit": 34.0, "priority": 1, "unit": "Gy"},
+    {"name": "HEART_Dmean",    "structure": "HEART",         "kind": "mean", "param": null, "direction": "upper", "goal": 15.0, "limit": 26.0, "priority": 1, "unit": "Gy"},
+    {"name": "LUNGS_V20",      "structure": "LUNGS_NOT_GTV", "kind": "V",    "param": 20,   "direction": "upper", "goal": 25.0, "limit": 37.0, "priority": 2, "unit": "%"},
+    {"name": "LUNGS_Dmean",    "structure": "LUNGS_NOT_GTV", "kind": "mean", "param": null, "direction": "upper", "goal": 13.0, "limit": 20.0, "priority": 2, "unit": "Gy"}
+  ]
+}

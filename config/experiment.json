@@ -1,0 +1,31 @@
+{
+  "_comment": "Single source of truth for an experiment. Everything here is identical across methods.",
+  "backend": "toy",
+  "patients": ["Toy_Patient_1", "Toy_Patient_2", "Toy_Patient_3"],
+  "scorecard": "config/scorecard_lung.json",
+
+  "budget": 10,
+  "allowed_factors": [0.5, 0.75, 1.5, 2.0],
+  "max_adjustments_per_iteration": 3,
+
+  "repeats": {"random": 5, "llm": 3, "llm_no_history": 3},
+  "seed": 1234,
+
+  "llm": {
+    "model": "claude-sonnet-5-5",
+    "max_tokens": 2048,
+    "temperature": null,
+    "max_api_calls": 80
+  },
+
+  "toy": {},
+
+  "portpy": {
+    "protocol": "Lung_2Gy_30Fx",
+    "data_dir": "data",
+    "hf_repo_id": "PortPy-Project/PortPy_Dataset",
+    "solver": "MOSEK",
+    "solver_kwargs": {},
+    "weight_bounds_factor": 100.0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "rt-planner": {
+      "command": "/ABSOLUTE/PATH/TO/rt_agent/.venv/bin/python",
+      "args": ["-m", "rt_agent.mcp_server"],
+      "cwd": "/ABSOLUTE/PATH/TO/rt_agent",
+      "env": {
+        "PYTHONPATH": "/ABSOLUTE/PATH/TO/rt_agent",
+        "RT_AGENT_CONFIG": "/ABSOLUTE/PATH/TO/rt_agent/config/experiment.json"
+      }
+    }
+  }
+}

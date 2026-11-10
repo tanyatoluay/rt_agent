@@ -1,0 +1,24 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Patient data (PortPy dataset, ~2 GB per patient; downloaded on demand from Hugging Face)
+data/
+
+# Local / personal outputs
+results/mcp_sessions/
+results/pi_report/
+results/*.log
+results/portpy_v1_run.log
+
+# Secrets and licenses
+.env
+*.lic
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/

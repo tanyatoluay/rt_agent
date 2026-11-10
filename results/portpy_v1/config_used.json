@@ -1,0 +1,43 @@
+{
+  "_comment": "Real experiments: PortPy lung IMRT. Start with one patient; add more once the pipeline works and you know the solve time.",
+  "backend": "portpy",
+  "patients": [
+    "Lung_Patient_3"
+  ],
+  "scorecard": "/Users/tanyatoluay/Desktop/rt_agent/config/scorecard_lung.json",
+  "budget": 10,
+  "allowed_factors": [
+    0.5,
+    0.75,
+    1.5,
+    2.0
+  ],
+  "max_adjustments_per_iteration": 3,
+  "repeats": {
+    "random": 5,
+    "llm": 3,
+    "llm_no_history": 3
+  },
+  "seed": 1234,
+  "llm": {
+    "model": "claude-sonnet-5-5",
+    "max_tokens": 2048,
+    "temperature": null,
+    "max_api_calls": 80
+  },
+  "portpy": {
+    "protocol": "Lung_2Gy_30Fx",
+    "data_dir": "/Users/tanyatoluay/Desktop/rt_agent/data",
+    "hf_repo_id": "PortPy-Project/PortPy_Dataset",
+    "solver": "SCS",
+    "solver_kwargs": {
+      "eps": 0.001
+    },
+    "opt_vox_xyz_res_mm": [
+      5.88,
+      5.88,
+      6.0
+    ],
+    "weight_bounds_factor": 100.0
+  }
+}
